@@ -26,17 +26,18 @@ repositories {
 extra["springCloudVersion"] = "2024.0.1"
 
 dependencies {
-//	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation("org.springframework.boot:spring-boot-starter-data-redis")
-	implementation("org.apache.commons:commons-pool2:2.12.0")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("org.apache.commons:commons-pool2:2.12.0")
 
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	implementation("org.springdoc:springdoc-openapi-ui:1.8.0")
+	implementation("org.postgresql:postgresql:42.7.3")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")

@@ -2,6 +2,15 @@ spring:
   application:
     name:
       user-service
+  datasource:
+    username: ${USERNAME_POSTGRES}
+    password: ${PASSWORD_POSTGRES}
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5434/${POSTGRES_DB}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
   data:
     redis:
       host: ${REDIS_HOST:localhost}
